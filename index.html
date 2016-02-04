@@ -8,7 +8,7 @@
 
       <meta name="robots" content="noindex">
 
-    <title>CodePen - A Pen by  ioannis pelelis</title>
+    <title>Dimitris Mouris website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="//codepen.io/assets/reset/reset.css">
@@ -16,11 +16,69 @@
     
         <style>
       body {
-  background: #00000b;
+  background: #0c173e;
   font-family: monospace;
 }
 
-.wrapper {
+main.wrapper {
+  color: #00000b;
+  width: 80%;
+  margin: 4rem auto;
+  position: relative;
+}
+
+.main-content {
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background: white;
+  box-sizing: border-box;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 4rem;
+  -webkit-transition: bottom ease-in-out 0.5s;
+  transition: bottom ease-in-out 0.5s;
+}
+
+.main-content::after {
+  content: "yoloo";
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  background: red;
+  height: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.8);
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.main-content:hover {
+  bottom: 1rem;
+}
+
+.main-content:hover::after {
+  z-index: -2;
+  box-shadow: 0 26px 160px black;
+}
+
+main h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 2.38em;
+  text-transform: uppercase;
+  border-bottom: 4px solid #00000b;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+nav.wrapper {
+  display: none;
   margin: 0 auto;
   text-align: center;
   position: absolute;
@@ -92,11 +150,6 @@
   height: auto;
 }
 
-.panel h1 {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
     </style>
 
     
@@ -107,22 +160,30 @@
   <body>
 
     
-<div class="wrapper">
-  <div class="panel active">about me</div>
-  <div class="panel inactive">fucking beauty</div>
-  <div class="panel inactive"> 
+<main class="wrapper">
+  <section class="main-content">
+    <h1>about me</h1>
+    <section>
+      <p>Hello there! My name is Dimitris Mouris and I am a fourth-year undergraduate student at the University of Athens, Greece. I study computer sciense and my technical interests are Programming Languages, Compilers, Operating Systems and Database Systems. You can find out more about my interests and my work in my CV(kai 8a exei ena link gia download). If you'd like to learn more about me, don't hesitate to contact me!</p>
+    </section>
+  </section>
+  <section class="main-content">
     <h1>contact</h1>
     <section>
       <ul>
-        <li>name..Dimitris Mouris</li>
         <li>email..jimmouris@hotmail.com</li>
         <li>github..https://github.com/jimouris</li>
         <li>bitbucket..https://bitbucket.com/jimouris</li>
         <li>linkedin..https://linkedin.com/in/jimouris</li>
       </ul>
     </section>
-  </div>
-</div>
+  </section>
+</main>
+<nav class="wrapper">
+  <div class="panel active">about me</div>
+  <div class="panel inactive">fucking beauty</div>
+  <div class="panel inactive"> </div>
+</nav>
     
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 

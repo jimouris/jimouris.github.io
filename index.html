@@ -5,18 +5,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="google" value="notranslate">
-
     <title>Dimitris Mouris Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://use.typekit.net/hjj0vxq.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script src="https://use.fonticons.com/f9170eb3.js"></script>
+    
     <link rel="stylesheet" href="//codepen.io/assets/reset/reset.css">
 
     
         <style>
       html {
-  background: -webkit-linear-gradient(bottom, #00000b, #0c173e);
-  background: linear-gradient(to top, #00000b, #0c173e);
+  background: -webkit-radial-gradient(50% 6rem, circle, #0c173e, #00000b);
+  background: radial-gradient(circle at 50% 6rem, #0c173e, #00000b);
   height: 100%;
   overflow: hidden;
 }
@@ -71,7 +72,7 @@ div.all-wrap {
   width: 850px;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 100px 100px;
+  padding: 20px 100px 100px;
   white-space: nowrap;
 }
 
@@ -80,13 +81,13 @@ main.wrapper {
   width: 850px;
   position: relative;
   display: inline-block;
-  -webkit-transition: margin-left ease-in-out 0.3s;
-  transition: margin-left ease-in-out 0.3s;
+  -webkit-transition: margin-left ease-in-out 0.15s;
+  transition: margin-left ease-in-out 0.15s;
 }
 
 .main-content {
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.9);
   background: white;
   box-sizing: border-box;
   padding: 2rem;
@@ -96,7 +97,7 @@ main.wrapper {
 }
 
 .contact {
-  margin-left: 110px;
+  margin-left: 120px;
 }
 
 img {
@@ -132,13 +133,13 @@ main p {
 
 .wrapper li:before {
   content: "- ";
-  font-family: "quatro", arial, sans-serif;
+  font-family: "futura-pt", arial, sans-serif;
 }
 
 main h1 {
-  font-family: "quatro", arial, sans-serif;
+  font-family: "futura-pt", arial, sans-serif;
   font-size: 3em;
-  font-weight: bold;
+  font-weight: 800;
   text-transform: uppercase;
   border-bottom: 4px solid #00000b;
   width: auto;
@@ -149,11 +150,11 @@ main h1 {
   width: 80%;
   height: 1rem;
   position: absolute;
+  display: none;
   left: 0;
   right: 0;
   margin: 0 auto;
   bottom: 0px;
-  box-shadow: 0 3px 50px 25px black;
   z-index: -1;
 }
 
@@ -182,7 +183,7 @@ nav .active::after,
 nav li::after,
 nav li::before {
   content: "";
-  height: 3px;
+  height: 1px;
   width: 0;
   display: block;
   position: absolute;
@@ -195,6 +196,11 @@ nav li:hover::after,
 nav li:hover::before,
 nav .active::after {
   width: 80%;
+}
+
+nav li.inactive:active::after,
+nav li.inactive:active::before {
+  width: 100%;
 }
 
 nav .active::after,
@@ -213,7 +219,130 @@ nav li:first-of-type {
 }
 
 .about-me.move-n-hide {
-  margin-left: -960px;
+  margin-left: -980px;
+}
+
+.contact a.fa {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.7em;
+  display: inline-block;
+  background: #f0f0f0;
+  margin: 0.8rem 0.5rem 0;
+  padding: 1.3rem;
+  border-radius: 2px;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact a.fa:first-of-type {
+  margin-left: 0;
+}
+
+.contact .with-icon {
+  display: none;
+}
+
+a.fa::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #333;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+a.fa:hover::after {
+  width: 100%;
+}
+
+a.fa:active::after {
+  width: 4%;
+  height: 4%;
+  top: 48%;
+}
+
+a.fa:hover::before {
+  color: white;
+}
+
+a.fa:active::before {
+  color: #333;
+}
+
+.fa:before {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+a.fa-linkedin:active::before {
+  color: #0177B5;
+}
+
+a.fa-linkedin:after {
+  background: #0177B5;
+}
+
+a.fa-bitbucket:active::before {
+  color: #1F5081;
+}
+
+a.fa-bitbucket::after {
+  background: #1F5081;
+}
+
+a.fa-twitter:active::before {
+  color: #5EA9DD;
+}
+
+a.fa-twitter::after {
+  background: #5EA9DD;
+}
+
+a.fa-github-alt:active::before {
+  color: #4078c0;
+}
+
+a.fa-github-alt::after {
+  background: #4078c0;
+}
+
+a.cv {
+  color: #333;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.cv:after {
+  content: "";
+  width: 0%;
+  display: block;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background-color: #333;
+  -webkit-transition: width 0.1s ease-in-out;
+  transition: width 0.1s ease-in-out;
+}
+
+a.cv:hover {
+  color: #111;
+}
+
+a.cv:hover::after {
+  width: 100%;
 }
 
     </style>
@@ -243,7 +372,7 @@ nav li:first-of-type {
         <div class="col-4 info">
           <p>
             Hello there! <br /> My name is Dimitris Mouris and I am a fourth-year undergraduate student at the University of Athens, Greece. <br /> 
-            <span class="personal-interest">I study computer sciense and my technical interests are:  </span>
+            <span class="personal-interest">I study computer science and my technical interests are:  </span>
           </p>
           <ul>
             <li>Programming Languages</li>
@@ -251,7 +380,7 @@ nav li:first-of-type {
             <li>Operating Systems </li>
             <li>& Database Systems.</li>
           </ul>
-          <p class="more-info">You can find out more about my interests and my work in my <a href="" class="cv">CV</a>.
+          <p class="more-info">You can find out more about my interests and my work in my <a href="./My_CV.pdf" target="_blank" class="cv">CV</a>.
         </p>
         <div>
       </section>
@@ -269,12 +398,11 @@ nav li:first-of-type {
             What an exellent choice to contact me! 
             You may reach me at:
           </p>
-          <a href="jimmouris@hotmail.com" target="_blank">email</a>
-          <a href="https://github.com/jimouris" target="_blank">github</a>
-          <a href="https://bitbucket.com/jimouris" target="_blank">bitbucket</a>
-          <a href="https://linkedin.com/in/jimouris" target="_blank">linkedin</a>
-          <a href="https://twitter.com/jimouris" target="_blank">twitter</a>
-
+          <a class="fa fa-github-alt" href="https://github.com/jimouris" target="_blank"><span class="with-icon">github</span></a>
+          <a class="fa fa-bitbucket" href="https://bitbucket.com/jimouris" target="_blank"><span class="with-icon">bitbucket</span></a>
+          <a class="fa fa-linkedin" href="https://linkedin.com/in/jimouris" target="_blank"><span class="with-icon">linkedin</span></a>
+          <a class="fa fa-twitter" href="https://twitter.com/jimouris" target="_blank"><span class="with-icon">twitter</span></a>
+          <p class="more-info">or you can drop me a line at <a href="mailto:jimmouris@hotmail.com?Subject=Hello%20Dimitri" target="_top" class="cv">jimmouris@hotmail.com</a></p>
           <div>
       </section>
     </section>

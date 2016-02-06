@@ -6,25 +6,82 @@
     <meta charset="UTF-8">
     <meta name="google" value="notranslate">
 
-      <meta name="robots" content="noindex">
-
-    <title>Dimitris Mouris website</title>
+    <title>Dimitris Mouris Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+<script src="https://use.typekit.net/hjj0vxq.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="stylesheet" href="//codepen.io/assets/reset/reset.css">
 
     
         <style>
-      body {
-  background: #0c173e;
-  font-family: monospace;
+      html {
+  background: -webkit-linear-gradient(bottom, #00000b, #0c173e);
+  background: linear-gradient(to top, #00000b, #0c173e);
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-2 {
+  width: 33.33333%;
+  float: left;
+}
+
+.col-4 {
+  width: 66.66667%;
+  float: left;
+}
+
+.col-1 {
+  width: 16.66667%;
+  float: left;
+}
+
+.col-5 {
+  width: 83.33333%;
+  float: left;
+}
+
+body {
+  font-family: "quatro-slab", monospace;
+  -webkit-font-smoothing: subpixel-antialised;
+  line-height: 1.38;
+}
+
+nav {
+  width: 850px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+div.all-wrap {
+  width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 100px;
+  white-space: nowrap;
 }
 
 main.wrapper {
   color: #00000b;
-  width: 80%;
-  margin: 4rem auto;
+  width: 850px;
   position: relative;
+  display: inline-block;
+  -webkit-transition: margin-left ease-in-out 0.3s;
+  transition: margin-left ease-in-out 0.3s;
 }
 
 .main-content {
@@ -36,118 +93,127 @@ main.wrapper {
   position: relative;
   width: 100%;
   bottom: 0;
-  margin-bottom: 4rem;
-  -webkit-transition: bottom ease-in-out 0.5s;
-  transition: bottom ease-in-out 0.5s;
 }
 
-.main-content::after {
-  content: "yoloo";
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  background: red;
-  height: 2rem;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  bottom: 0;
-  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.8);
-  -webkit-transition: box-shadow 0.5s ease-in-out;
-  transition: box-shadow 0.5s ease-in-out;
+.contact {
+  margin-left: 110px;
 }
 
-.main-content:hover {
-  bottom: 1rem;
+img {
+  max-width: 100%;
 }
 
-.main-content:hover::after {
-  z-index: -2;
-  box-shadow: 0 26px 160px black;
+.egw {
+  margin-left: -4rem;
+  border-radius: 1px;
+}
+
+main p {
+  font-weight: 400;
+  vertical-align: text-top;
+  white-space: initial;
+}
+
+.info {
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+
+.personal-interest {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.more-info {
+  border-top: 2px solid lightgray;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+}
+
+.wrapper li:before {
+  content: "- ";
+  font-family: "quatro", arial, sans-serif;
 }
 
 main h1 {
-  font-size: 1.5em;
+  font-family: "quatro", arial, sans-serif;
+  font-size: 3em;
   font-weight: bold;
-  line-height: 2.38em;
   text-transform: uppercase;
   border-bottom: 4px solid #00000b;
   width: auto;
   margin-bottom: 1rem;
 }
 
-nav.wrapper {
-  display: none;
-  margin: 0 auto;
-  text-align: center;
+.object-shadow {
+  width: 80%;
+  height: 1rem;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 4vh;
-  -webkit-perspective: 500px;
-          perspective: 500px;
+  margin: 0 auto;
+  bottom: 0px;
+  box-shadow: 0 3px 50px 25px black;
+  z-index: -1;
 }
 
-.panel {
-  cursor: pointer;
-  width: 10vw;
-  height: 10vw;
-  padding: 1rem;
+nav {
+  margin-bottom: 1rem;
+}
+
+nav li {
   display: inline-block;
-  vertical-align: bottom;
-  margin: 1vw;
-  box-sizing: border-box;
-  background: #033d8b;
   color: white;
-  box-shadow: 0 1px 84px rgba(244, 137, 70, 0.3), 0 0 6px black;
-  border-radius: 2px;
-  -webkit-transform: rotateX(70deg);
-          transform: rotateX(70deg);
-  -webkit-transition-property: width, -webkit-transform;
-  transition-property: width, -webkit-transform;
-  transition-property: width, transform;
-  transition-property: width, transform, -webkit-transform;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
 }
 
-.panel:hover {
-  box-shadow: 0 1px 84px rgba(244, 137, 70, 0.3), 0 0 6px black, 0 0 2px rgba(255, 255, 255, 0.7);
-  padding-bottom: 10vw;
-  -webkit-transform: rotateX(0deg) translateY(-5vw);
-          transform: rotateX(0deg) translateY(-5vw);
-  width: 40vw;
-  z-index: 2;
-}
-
-.panel section {
-  text-align: left;
-  padding-left: 1rem;
-  opacity: 0;
-  -webkit-transition-delay: 0;
-          transition-delay: 0;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-}
-
-.panel:hover section {
+nav li:hover {
+  color: white;
   opacity: 1;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-delay: 0.7s;
-          transition-delay: 0.7s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  height: auto;
+}
+
+nav .active::after,
+nav li::after,
+nav li::before {
+  content: "";
+  height: 3px;
+  width: 0;
+  display: block;
+  position: absolute;
+  background: white;
+  -webkit-transition: width 0.1s ease-in;
+  transition: width 0.1s ease-in;
+}
+
+nav li:hover::after,
+nav li:hover::before,
+nav .active::after {
+  width: 80%;
+}
+
+nav .active::after,
+nav li::after {
+  bottom: -5px;
+  left: 0;
+}
+
+nav li::before {
+  top: -5px;
+  right: 0;
+}
+
+nav li:first-of-type {
+  margin-right: 0.8rem;
+}
+
+.about-me.move-n-hide {
+  margin-left: -960px;
 }
 
     </style>
@@ -159,35 +225,74 @@ nav.wrapper {
 
   <body>
 
-    
-<main class="wrapper">
-  <section class="main-content">
-    <h1>about me</h1>
-    <section>
-      <p>Hello there! My name is Dimitris Mouris and I am a fourth-year undergraduate student at the University of Athens, Greece. I study computer sciense and my technical interests are Programming Languages, Compilers, Operating Systems and Database Systems. You can find out more about my interests and my work in my CV(kai 8a exei ena link gia download). If you'd like to learn more about me, don't hesitate to contact me!</p>
-    </section>
-  </section>
-  <section class="main-content">
-    <h1>contact</h1>
-    <section>
-      <ul>
-        <li>email..jimmouris@hotmail.com</li>
-        <li>github..https://github.com/jimouris</li>
-        <li>bitbucket..https://bitbucket.com/jimouris</li>
-        <li>linkedin..https://linkedin.com/in/jimouris</li>
-      </ul>
-    </section>
-  </section>
-</main>
-<nav class="wrapper">
-  <div class="panel active">about me</div>
-  <div class="panel inactive">fucking beauty</div>
-  <div class="panel inactive"> </div>
+    <nav>
+  <ul>
+    <li id="about" class="active">about me</li>
+    <li id="contact" class="inactive">contact me</li>
+  </ul>
 </nav>
+
+<div class="all-wrap">
+  <main class="wrapper about-me">
+    <section class="main-content">
+      <h1>about me</h1>
+      <section class="clearfix">
+        <div class="col-2 egw">
+          <img src="./egw.jpg"/>
+        </div>
+        <div class="col-4 info">
+          <p>
+            Hello there! <br /> My name is Dimitris Mouris and I am a fourth-year undergraduate student at the University of Athens, Greece. <br /> 
+            <span class="personal-interest">I study computer sciense and my technical interests are:  </span>
+          </p>
+          <ul>
+            <li>Programming Languages</li>
+            <li>Compilers</li>
+            <li>Operating Systems </li>
+            <li>& Database Systems.</li>
+          </ul>
+          <p class="more-info">You can find out more about my interests and my work in my <a href="" class="cv">CV</a>.
+        </p>
+        <div>
+      </section>
+    </section>
+        <div class="object-shadow"></div>
+  </main>
+
+
+  <main class="wrapper contact hidden">
+    <section class="main-content">
+      <h1>contact me</h1>
+      <section class="clearfix">
+        <div class="col-4 info">
+          <p>
+            What an exellent choice to contact me! 
+            You may reach me at:
+          </p>
+          <a href="jimmouris@hotmail.com" target="_blank">email</a>
+          <a href="https://github.com/jimouris" target="_blank">github</a>
+          <a href="https://bitbucket.com/jimouris" target="_blank">bitbucket</a>
+          <a href="https://linkedin.com/in/jimouris" target="_blank">linkedin</a>
+          <a href="https://twitter.com/jimouris" target="_blank">twitter</a>
+
+          <div>
+      </section>
+    </section>
+        <div class="object-shadow"></div>
+  </main>    
+</div>
     
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    
+        <script>
+      $('nav').delegate('.inactive', 'click', function(){
+  $('.about-me').toggleClass('move-n-hide');
+  $(this).removeClass('inactive').addClass("active");
+  $(this).siblings().addClass('inactive').removeClass('active');
+});
+      //@ sourceURL=pen.js
+    </script>
+
     
     
     

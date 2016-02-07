@@ -1,3 +1,7 @@
+// force an https redirect
+if (window.location.protocol != "https:")
+    window.location.protocol = "https";
+
 // move from one section to another
 var toggleSections = function(){
 	$('.about-me').toggleClass('move-n-hide');

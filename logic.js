@@ -1,5 +1,7 @@
+$(document).ready(function(){
+
 // force an https redirect
-if (window.location.protocol != "https:" && !window.location.protocol === "file:")
+if (window.location.protocol != "https:" )
     window.location.protocol = "https";
 
 // move from one section to another
@@ -33,4 +35,5 @@ $('#contact').click(function(){
 
 $('#about').click(function(){
 	location.hash = 'about';
+});
 });

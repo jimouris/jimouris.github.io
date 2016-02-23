@@ -1,11 +1,15 @@
 html {
-  background: -webkit-radial-gradient(50% 6rem, circle, #0c173e, #00000b);
-  background: radial-gradient(circle at 50% 6rem, #0c173e, #00000b);
+  background: url('./bg.png') repeat;
   height: 100%;
   overflow: hidden;
 }
 
 
+.skype-name{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
 body {
   height: 100%;
   width: 100vw;
@@ -27,6 +31,11 @@ body {
 
 .col-4 {
   width: 66.66667%;
+  float: left;
+}
+
+.col-100{
+  width: 100%;
   float: left;
 }
 
@@ -119,7 +128,7 @@ main p {
 }
 
 .wrapper li:before {
-  content: "- ";
+  content: "> ";
   font-family: "futura-pt", arial, sans-serif;
 }
 
@@ -370,7 +379,19 @@ a:hover{
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-
+    .skype-name{
+      opacity: 1;
+      transition: opacity 0.4s ease-in;
+      position: absolute;
+      bottom: -30px;
+      height: 24px;
+      border-radius: 32px;
+      background: #00AFF0;
+      color: white;
+      padding: 0.4em 0.5em;
+      display: block;
+      width: auto;
+    }
 }
 
 @media screen and (max-width: 645px){
@@ -420,4 +441,59 @@ a:hover{
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+
+
+
+
+
+p#SkypeButton_Call_dimitris.mouris_1_paraElement {}
+
+div#SkypeButton_Call_dimitris.mouris_1 {
+    display: inline-block!important;
+    width: 20%;
+}
+
+div#SkypeButton_Call_dimitris.mouris_1 {}
+
+div[id*="Skype"] {
+    display: inline-block;
+    /* max-height: 70px; */
+    vertical-align: top;
+    color: black;
+    padding: 1.6em 0 0 0.9em;
+    margin-top: 0.6em;
+    position: relative;
+}
+
+div[id*="Skype"] p img {
+    margin: 0!important;
+    padding: 0!important;
+    line-height: 0;
+    vertical-align: 0px!important;
+}
+
+div[id*="Skype"] p {
+    margin: 0;
+    font-size: 10px;
+}
+
+p.more-info {
+    width: 100%;
+}
+
+
+div[id*="Skype"]:hover .skype-name{
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+  position: absolute;
+  bottom: -30px;
+  height: 24px;
+  border-radius: 32px;
+  background: #00AFF0;
+  color: white;
+  padding: 0.4em 0.5em;
+  display: block;
+  width: auto;
 }

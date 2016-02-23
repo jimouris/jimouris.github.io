@@ -1,5 +1,5 @@
 // force an https redirect
-if (window.location.protocol != "https:")
+if (window.location.protocol != "https:" && !window.location.protocol === "file:")
     window.location.protocol = "https";
 
 // move from one section to another

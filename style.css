@@ -313,6 +313,14 @@ a.fa-github-alt::after {
   background: #4078c0;
 }
 
+a.fa-key:active::before {
+  color: #5EA9DD;
+}
+
+a.fa-key::after {
+  background: #5EA9DD;
+}
+
 a.cv {
   color: #333;
   position: relative;

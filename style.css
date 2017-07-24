@@ -111,6 +111,10 @@ main p {
   white-space: initial;
 }
 
+b{
+  font-weight: bold;
+}
+
 .info {
   padding-left: 1rem;
   box-sizing: border-box;

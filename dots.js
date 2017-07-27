@@ -7,7 +7,7 @@ var canvasDots = function() {
   canvas.height = window.innerHeight;
   canvas.style.display = 'block';
   ctx.fillStyle = colorDot;
-  ctx.lineWidth = .1;
+  ctx.lineWidth = .2;
   ctx.strokeStyle = color;
 
   var mousePosition = {
@@ -29,7 +29,7 @@ var canvasDots = function() {
     this.vx = -.5 + Math.random();
     this.vy = -.5 + Math.random();
 
-    this.radius = Math.random();
+    this.radius = Math.random() * 1.5;
   }
 
   Dot.prototype = {

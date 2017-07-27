@@ -1,7 +1,17 @@
 html {
-  background: url('./bg.png') repeat;
   height: 100%;
   overflow: hidden;
+}
+
+.background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 
@@ -108,9 +118,9 @@ main.wrapper {
 }
 
 .main-content {
-  border-radius: 4px;
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.9);
-  background: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.28);
   box-sizing: border-box;
   padding: 2rem;
   position: relative;
@@ -203,7 +213,7 @@ nav {
 
 nav li {
   display: inline-block;
-  color: white;
+  color: #222;
   text-transform: uppercase;
   font-size: 16px;
   cursor: pointer;
@@ -214,7 +224,7 @@ nav li {
 }
 
 nav li:hover {
-  color: white;
+  color: #000;
   opacity: 1;
 }
 
@@ -226,7 +236,7 @@ nav li::before {
   width: 0;
   display: block;
   position: absolute;
-  background: white;
+  background: #222;
   -webkit-transition: width 0.1s ease-in;
   transition: width 0.1s ease-in;
 }
@@ -324,45 +334,12 @@ a.fa:active::before {
   transition: color 0.2s ease-in-out;
 }
 
-a.fa-linkedin:active::before {
-  color: #0177B5;
+a.fa::after{
+  background: #00bdbf;
 }
 
-a.fa-linkedin:after {
-  background: #0177B5;
-}
-
-a.fa-bitbucket:active::before {
-  color: #1F5081;
-}
-
-a.fa-bitbucket::after {
-  background: #1F5081;
-}
-
-a.fa-twitter:active::before {
-  color: #5EA9DD;
-}
-
-a.fa-twitter::after {
-  background: #5EA9DD;
-}
-
-a.fa-github-alt:active::before {
-  color: #4078c0;
-}
-
-a.fa-github-alt::after {
-  background: #4078c0;
-}
-
-
-a.fa-key:active::before {
-  color: #5EA9DD;
-}
-
-a.fa-key::after {
-  background: #5EA9DD;
+a.fa:active::before {
+  color: #00bdbf;
 }
 
 a.cv {
@@ -386,12 +363,16 @@ a.cv:after {
 }
 
 a.cv:hover {
-  color: #111;
+  color: #00bdbf;
   text-decoration: underline;
 }
 
 a.cv:hover::after {
   /*width: 100%;*/
+}
+
+.text-green{
+  color: #00bdbf;
 }
 
 a,

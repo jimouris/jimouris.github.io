@@ -24,28 +24,54 @@ body {
   clear: both;
 }
 
+
+.col-1 {
+  width: 10%;
+  float: left;
+}
+
 .col-2 {
-  width: 33.33333%;
+  width: 20%;
+  float: left;
+}
+
+.col-3 {
+  width: 30%;
   float: left;
 }
 
 .col-4 {
-  width: 66.66667%;
-  float: left;
-}
-
-.col-100{
-  width: 100%;
-  float: left;
-}
-
-.col-1 {
-  width: 16.66667%;
+  width: 40%;
   float: left;
 }
 
 .col-5 {
-  width: 83.33333%;
+  width: 50%;
+  float: left;
+}
+
+.col-6 {
+  width: 60%;
+  float: left;
+}
+
+.col-7 {
+  width: 70%;
+  float: left;
+}
+
+.col-8 {
+  width: 80%;
+  float: left;
+}
+
+.col-9 {
+  width: 90%;
+  float: left;
+}
+
+.col-10{
+  width: 100%;
   float: left;
 }
 
@@ -92,12 +118,25 @@ main.wrapper {
   bottom: 0;
 }
 
+.dont-break{
+  white-space: nowrap;
+}
+
 .contact {
   margin-left: 120px;
 }
 
 img {
   max-width: 100%;
+}
+
+.img-left{
+  float:left;
+}
+
+.p-20 {
+  display: inline-block;
+  padding-top: 20px;
 }
 
 .egw {
@@ -127,7 +166,7 @@ b{
 
 .more-info {
   border-top: 2px solid lightgray;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   padding-top: 0.5rem;
 }
 
@@ -222,13 +261,13 @@ nav li:first-of-type {
   margin-left: -980px;
 }
 
-.contact a.fa {
+a.fa {
   text-decoration: none;
   color: #333;
   font-size: 1.7em;
   display: inline-block;
   background: #f0f0f0;
-  margin: 0.8rem 0.5rem 0;
+  margin: 0.5rem 0.5rem 0;
   padding: 1.3rem;
   border-radius: 2px;
   width: auto;
@@ -236,7 +275,7 @@ nav li:first-of-type {
   overflow: hidden;
 }
 
-.contact a.fa:first-of-type {
+a.fa:first-of-type {
   margin-left: 0;
 }
 
@@ -317,6 +356,7 @@ a.fa-github-alt::after {
   background: #4078c0;
 }
 
+
 a.fa-key:active::before {
   color: #5EA9DD;
 }
@@ -347,15 +387,20 @@ a.cv:after {
 
 a.cv:hover {
   color: #111;
+  text-decoration: underline;
 }
 
 a.cv:hover::after {
-  width: 100%;
+  /*width: 100%;*/
 }
 
 a,
 a:visited{
   color: rgb(3, 61, 139);
+}
+
+a.fa-key{
+  color: #333;
 }
 
 a:hover{

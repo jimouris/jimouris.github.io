@@ -377,7 +377,7 @@ a.cv:hover::after {
 
 a,
 a:visited{
-  color: rgb(3, 61, 139);
+  color: #333;
 }
 
 a.fa-key{

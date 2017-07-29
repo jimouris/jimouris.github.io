@@ -99,7 +99,7 @@ var canvasDots = function() {
     if (event===undefined) event= window.event;
     // var target= 'target' in event? event.target : event.srcElement;
 
-    if (dots.distance > 400) dots.distance = 100;
+    if (dots.distance > 250) dots.distance = 100;
     else dots.distance *= 1.3;
   };
 

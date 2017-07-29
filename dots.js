@@ -95,6 +95,14 @@ var canvasDots = function() {
     mousePosition.y = parameter.pageY;
   }
 
+  window.onclick= function(event) {
+    if (event===undefined) event= window.event;
+    // var target= 'target' in event? event.target : event.srcElement;
+
+    if (dots.distance > 400) dots.distance = 100;
+    else dots.distance *= 1.3;
+  };
+
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;
 

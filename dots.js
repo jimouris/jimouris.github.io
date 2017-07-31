@@ -17,7 +17,7 @@ var canvasDots = function() {
 
   var dots = {
     nb: 400,
-    distance: 110,
+    distance: 105,
     d_radius: 100,
     array: []
   };
@@ -99,8 +99,8 @@ var canvasDots = function() {
     if (event===undefined) event= window.event;
     // var target= 'target' in event? event.target : event.srcElement;
 
-    if (dots.distance > 250) dots.distance = 100;
-    else dots.distance *= 1.3;
+    if (dots.distance > 150) dots.distance = 100;
+    else dots.distance *= 1.1;
   };
 
   mousePosition.x = window.innerWidth / 2;

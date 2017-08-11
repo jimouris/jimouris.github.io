@@ -9,6 +9,7 @@ var canvasDots = function() {
   ctx.fillStyle = colorDot;
   ctx.lineWidth = .2;
   ctx.strokeStyle = color;
+  var mobileWidth = 640;
 
   var mousePosition = {
     x: 30 * canvas.width / 100,
@@ -17,7 +18,7 @@ var canvasDots = function() {
 
   var dots = {
     nb: 400,
-    distance: 105,
+    distance: 65,
     d_radius: 100,
     array: []
   };
@@ -77,7 +78,18 @@ var canvasDots = function() {
     }
   };
 
+  function getWindowWidth (){
+    var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0];
+    return w.innerWidth || e.clientWidth || g.clientWidth;
+  }
+
   function createDots(){
+    if (getWindowWidth <= mobileWidth)
+      return;
+    
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(i = 0; i < dots.nb; i++){
       dots.array.push(new Dot());
@@ -99,21 +111,16 @@ var canvasDots = function() {
     if (event===undefined) event= window.event;
     // var target= 'target' in event? event.target : event.srcElement;
 
-    if (dots.distance > 150) dots.distance = 60;
+    if (dots.distance > 120) dots.distance = 60;
     else dots.distance += 20;
   };
 
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;
 
-  var w = window,
-  d = document,
-  e = d.documentElement,
-  g = d.getElementsByTagName('body')[0],
-  x = w.innerWidth || e.clientWidth || g.clientWidth,
-  if (x > 640px)
-    setInterval(createDots, 1000/30); 
+  setInterval(createDots, 1000/30); 
 };
+
 
 window.onload = function() {
   canvasDots();

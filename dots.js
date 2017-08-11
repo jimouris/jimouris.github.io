@@ -106,7 +106,13 @@ var canvasDots = function() {
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;
 
-  setInterval(createDots, 1000/30); 
+  var w = window,
+  d = document,
+  e = d.documentElement,
+  g = d.getElementsByTagName('body')[0],
+  x = w.innerWidth || e.clientWidth || g.clientWidth,
+  if (x > 640px)
+    setInterval(createDots, 1000/30); 
 };
 
 window.onload = function() {

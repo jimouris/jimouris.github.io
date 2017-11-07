@@ -1,40 +1,15 @@
-$(document).ready(function(){
-
-
-// force an https redirect
-if (window.location.protocol != "https:" && window.location.protocol != "file:")
-    window.location.protocol = "https";
-
-// move from one section to another
-var toggleSections = function(){
-	$('.about-me').toggleClass('move-n-hide');
-    $(this).removeClass('inactive').addClass("active");
-    $(this).siblings().addClass('inactive').removeClass('active');
-};
-
-// get active section on reload
-var section = location.hash;
-if (section == '#contact'){
-	toggleSections();
-	$('#contact').removeClass('inactive').addClass("active");
-    $('#about').addClass('inactive').removeClass('active');
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 
-
-// once everything is setup then display content
-$('.all-wrap').css('opacity', '1');
-
-// functionality for navigation items
-$('nav').delegate('.inactive', 'click', toggleSections);
-
-
-// use for pagination
-$('#contact').click(function(){
-	location.hash = 'contact';
-});
-
-
-$('#about').click(function(){
-	location.hash = 'about';
-});
-});
+document.getElementById("defaultOpen").click();

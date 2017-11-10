@@ -135,6 +135,10 @@ main.wrapper {
   margin-left: 120px;
 }
 
+.publications {
+  margin-left: 120px;
+}
+
 img {
   max-width: 100%;
 }
@@ -412,6 +416,11 @@ a:hover{
         margin-top: 0;
     }
     .contact{
+        margin-left: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .publications{
         margin-left: 0;
         margin-top: 2rem;
         margin-bottom: 2rem;

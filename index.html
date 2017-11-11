@@ -47,19 +47,19 @@
 
 </head>
 <body>
-    <div class="back_mob"></div>
-    <canvas class="background"></canvas>
+    <div class="back_mob" id="background-mobile"></div>
+    <canvas class="background" id="background-dots"></canvas>
 
     <div class="all-wrap">
         <nav class="tab">
-            <button class="tablinks" onclick="openTab(event, 'AboutMe')" id="defaultOpen">AboutMe</button>
+            <button class="js-tablinks" onclick="openTab(event, 'AboutMe')" id="defaultOpen">AboutMe</button>
 <!-- 
-            <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
+            <button class="js-tablinks" onclick="openTab(event, 'Publications')">Publications</button>
 -->
-            <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+            <button class="js-tablinks" onclick="openTab(event, 'Contact')">Contact</button>
         </nav>
 
-        <main class="wrapper about-me tabcontent show-mobile"  id="AboutMe">
+        <main class="wrapper show-mobile js-tabcontent"  id="AboutMe">
             <section class="main-content">
                 <h1>./About Me</h1>
                 <section class="clearfix">
@@ -90,7 +90,7 @@
         </main>
 
 <!-- 
-        <main class="wrapper publications tabcontent show-mobile" id="Publications">
+        <main class="wrapper show-mobile js-tabcontent " id="Publications">
             <section class="main-content">
                 <h1>./Publications</h1>
                 <section class="clearfix">
@@ -109,7 +109,7 @@
         </main>
 -->
 
-        <main class="wrapper contact tabcontent show-mobile"  id="Contact" >
+        <main class="wrapper show-mobile js-tabcontent"  id="Contact" >
             <section class="main-content">
                 <h1>./Contact</h1>
                 <section class="clearfix">

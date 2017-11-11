@@ -129,6 +129,10 @@ window.mobilecheck = function() {
 };
 
 window.onload = function() {
-  if (!mobilecheck())
+  if (!mobilecheck()){
     canvasDots();
+    document.getElementById('background-dots').style.display = "block";;
+  } else {
+    document.getElementById('background-mobile').style.display = "block";;
+  }
 };

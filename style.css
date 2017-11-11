@@ -438,6 +438,10 @@ a:hover{
       display: block;
       width: auto;
     }
+
+    .show-mobile{
+      display: block!important;
+    }
 }
 
 @media screen and (max-width: 645px){

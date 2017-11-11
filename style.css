@@ -109,6 +109,7 @@ div.all-wrap {
 main.wrapper {
   color: #00000b;
   width: 100%;
+  margin-top: 15px;
   position: relative;
   display: inline-block;
   -webkit-transition: margin-left ease-in-out 0.15s;
@@ -559,4 +560,10 @@ canvas{
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+
+.main-content-text {
+    padding: 0 15px 15px;
+    text-align: left;
 }

@@ -213,6 +213,7 @@ nav {
 button{
   background: transparent;
   border: none;
+  outline: none;
 }
 
 nav button {

@@ -102,7 +102,6 @@ div.all-wrap {
   overflow: hidden;
   padding: 20px 100px 100px;
   white-space: nowrap;
-  opacity: 0;
   transition: opacity .2s ease-in;
   transition-delay: .2s;
 }
@@ -131,14 +130,6 @@ main.wrapper {
   white-space: nowrap;
 }
 
-.contact {
-  margin-left: 120px;
-}
-
-.publications {
-  margin-left: 120px;
-}
-
 img {
   max-width: 100%;
 }
@@ -165,6 +156,10 @@ main p {
 
 b{
   font-weight: bold;
+}
+
+i{
+  font-style: italic;
 }
 
 .info {
@@ -214,7 +209,12 @@ nav {
   margin-bottom: 1rem;
 }
 
-nav li {
+button{
+  background: transparent;
+  border: none;
+}
+
+nav button {
   display: inline-block;
   color: #222;
   text-transform: uppercase;
@@ -226,14 +226,14 @@ nav li {
   transition: opacity 0.1s ease-in;
 }
 
-nav li:hover {
+nav button:hover {
   color: #000;
   opacity: 1;
 }
 
 nav .active::after,
-nav li::after,
-nav li::before {
+nav button::after,
+nav button::before {
   content: "";
   height: 1px;
   width: 0;
@@ -244,29 +244,29 @@ nav li::before {
   transition: width 0.1s ease-in;
 }
 
-nav li:hover::after,
-nav li:hover::before,
+nav button:hover::after,
+nav button:hover::before,
 nav .active::after {
   width: 80%;
 }
 
-nav li.inactive:active::after,
-nav li.inactive:active::before {
+nav button.inactive:active::after,
+nav button.inactive:active::before {
   width: 100%;
 }
 
 nav .active::after,
-nav li::after {
+nav button::after {
   bottom: -5px;
   left: 0;
 }
 
-nav li::before {
+nav button::before {
   top: -5px;
   right: 0;
 }
 
-nav li:first-of-type {
+nav button:first-of-type {
   margin-right: 0.8rem;
 }
 
@@ -561,4 +561,21 @@ div[id*="Skype"]:hover .skype-name{
         height: 100%;
         background-size: cover;
     }
+}
+
+
+/* CSS Fading effect */
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

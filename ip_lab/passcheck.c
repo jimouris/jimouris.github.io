@@ -5,7 +5,7 @@ int main(void) {
     while (ch != EOF) {
         int score = 0;
         int symbol = 0, numeric = 0, lowercase = 0, capital = 0, length = 0;
-        while (ch != '\n') {
+        while (ch != EOF && ch != '\n') {
             putchar(ch);
 
             length++;

@@ -1,0 +1,571 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(15, 15, 15);
+}
+
+.skype-name{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+body {
+  height: 100%;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.col-1 {
+  width: 10%;
+  float: left;
+}
+
+.col-2 {
+  width: 20%;
+  float: left;
+}
+
+.col-3 {
+  width: 30%;
+  float: left;
+}
+
+.col-4 {
+  width: 40%;
+  float: left;
+}
+
+.col-5 {
+  width: 50%;
+  float: left;
+}
+
+.col-6 {
+  width: 60%;
+  float: left;
+}
+
+.col-7 {
+  width: 70%;
+  float: left;
+}
+
+.col-8 {
+  width: 80%;
+  float: left;
+}
+
+.col-9 {
+  width: 90%;
+  float: left;
+}
+
+.col-10{
+  width: 100%;
+  float: left;
+}
+
+body {
+  font-family: "quatro-slab", monospace;
+  -webkit-font-smoothing: subpixel-antialised;
+  line-height: 1.38;
+}
+
+nav {
+  width: 850px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+div.all-wrap {
+  width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 100px 100px;
+  white-space: nowrap;
+  transition: opacity .2s ease-in;
+  transition-delay: .2s;
+}
+
+main.wrapper {
+  color: #b2b2b2;
+  width: 100%;
+  margin-top: 15px;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: margin-left ease-in-out 0.15s;
+  transition: margin-left ease-in-out 0.15s;
+}
+
+.main-content {
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  background: rgba(15, 15, 15, 1);
+  box-sizing: border-box;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.dont-break{
+  white-space: nowrap;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-left{
+  float:left;
+}
+
+.p-20 {
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.egw {
+  margin-left: -4rem;
+  border-radius: 1px;
+}
+
+main p {
+  font-weight: 400;
+  vertical-align: text-top;
+  white-space: initial;
+}
+
+b{
+  font-weight: bold;
+}
+
+i{
+  font-style: italic;
+}
+
+.info {
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+
+.personal-interest {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.more-info {
+  border-top: 2px solid lightgray;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.wrapper li:before {
+  content: "> ";
+  font-family: "futura-pt", arial, sans-serif;
+}
+
+main h1 {
+  font-family: "futura-pt", arial, sans-serif;
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 4px solid #b2b2b2;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.object-shadow {
+  width: 80%;
+  height: 1rem;
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0px;
+  z-index: -1;
+}
+
+nav {
+  margin-bottom: 1rem;
+}
+
+button{
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+nav button {
+  display: inline-block;
+  color: #b2b2b2;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+
+nav button:hover {
+  color: #e5e5e5;
+  opacity: 1;
+}
+
+nav .active::after,
+nav button::after,
+nav button::before {
+  content: "";
+  height: 1px;
+  width: 0;
+  display: block;
+  position: absolute;
+  background: #e5e5e5;
+  -webkit-transition: width 0.1s ease-in;
+  transition: width 0.1s ease-in;
+}
+
+nav button:hover::after,
+nav button:hover::before,
+nav .active::after {
+  width: 80%;
+}
+
+nav button.inactive:active::after,
+nav button.inactive:active::before {
+  width: 100%;
+}
+
+nav .active::after,
+nav button::after {
+  bottom: -5px;
+  left: 0;
+}
+
+nav button::before {
+  top: -5px;
+  right: 0;
+}
+
+nav button:first-of-type {
+  margin-right: 0.8rem;
+}
+
+
+a.fa {
+  text-decoration: none;
+  color: #c63797;
+  font-size: 1.7em;
+  display: inline-block;
+  background: #262626;
+  margin: 0.5rem 0.5rem 0;
+  padding: 1.3rem;
+  border-radius: 2px;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+a.fa:first-of-type {
+  margin-left: 0;
+}
+
+.contact .with-icon {
+  display: none;
+}
+
+a.fa::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #333;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+a.fa:hover::after {
+  width: 100%;
+}
+
+a.fa:active::after {
+  width: 4%;
+  height: 4%;
+  top: 48%;
+}
+
+a.fa:hover::before {
+  color: white;
+}
+
+a.fa:active::before {
+  color: #333;
+}
+
+.fa:before {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+a.fa::after{
+  background: #00bdbf;
+}
+
+a.fa:active::before {
+  color: #00bdbf;
+}
+
+a.cv {
+  color: #b2b2b2;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.cv:after {
+  content: "";
+  width: 0%;
+  display: block;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background-color: #b2b2b2;
+  -webkit-transition: width 0.1s ease-in-out;
+  transition: width 0.1s ease-in-out;
+}
+
+a.cv:hover {
+  color: #00bdbf;
+  text-decoration: underline;
+}
+
+a.cv:hover::after {
+  /*width: 100%;*/
+}
+
+.text-green{
+  color: #00bdbf;
+}
+
+a,
+a:visited{
+  color: #b2b2b2;
+}
+
+a.fa-key{
+  color: #b2b2b2;
+}
+
+a:hover{
+  color: #b2b2b2;
+}
+
+@media screen and (max-width: 1070px){
+    div.all-wrap, nav{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    div.all-wrap{
+        width: 100%;
+        padding: 2rem 30px;
+        box-sizing: border-box;
+        white-space: normal;
+    }
+
+    nav{
+        display: none;
+    }
+    .skype-name{
+      opacity: 1;
+      transition: opacity 0.4s ease-in;
+      position: absolute;
+      bottom: -30px;
+      height: 24px;
+      border-radius: 32px;
+      background: #00AFF0;
+      color: white;
+      padding: 0.4em 0.5em;
+      display: block;
+      width: auto;
+    }
+
+    .show-mobile{
+      display: block!important;
+    }
+}
+
+@media screen and (max-width: 645px){
+    .main-content{
+        padding: 0rem;
+    }
+    div.all-wrap{
+        text-align: center;
+    }
+    .info{
+        width: 100%;
+        margin-top: .5rem;
+        padding-left: 0;
+        text-align: left;
+        padding: 0 1rem 1rem;
+    }
+    .egw{
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+        border-radius: 50%;
+        float: none;
+        display: block;
+        overflow: hidden;
+        border: 2px solid #fff;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    .egw img{
+        margin-top: -23px;
+        margin-left: -1px;
+    }
+
+    .personal-interest{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    div.all-wrap{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    div.all-wrap{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+
+p#SkypeButton_Call_dimitris.mouris_1_paraElement {}
+
+div#SkypeButton_Call_dimitris.mouris_1 {
+    display: inline-block!important;
+    width: 20%;
+}
+
+div#SkypeButton_Call_dimitris.mouris_1 {}
+
+div[id*="Skype"] {
+    display: inline-block;
+    /* max-height: 70px; */
+    vertical-align: top;
+    color: black;
+    padding: 1.6em 0 0 0.9em;
+    margin-top: 0.6em;
+    position: relative;
+}
+
+div[id*="Skype"] p img {
+    margin: 0!important;
+    padding: 0!important;
+    line-height: 0;
+    vertical-align: 0px!important;
+}
+
+div[id*="Skype"] p {
+    margin: 0;
+    font-size: 10px;
+}
+
+p.more-info {
+    width: 100%;
+}
+
+
+div[id*="Skype"]:hover .skype-name{
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+  position: absolute;
+  bottom: -30px;
+  height: 24px;
+  border-radius: 32px;
+  background: #00AFF0;
+  color: white;
+  padding: 0.4em 0.5em;
+  display: block;
+  width: auto;
+}
+
+
+
+canvas{
+  display: none;
+}
+.back_mob{
+    display: none;
+    position: fixed;
+    background-image: url('./back.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+
+
+
+/* CSS Fading effect */
+.js-tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+.main-content-text {
+    padding: 0 15px 15px;
+    text-align: left;
+}

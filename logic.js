@@ -13,3 +13,18 @@ function openTab(evt, tabName) {
 }
 
 document.getElementById("defaultOpen").click();
+
+function changeStylesheet() {
+    var theme_elements = document.getElementsByName("bgtheme");
+    var theme_elements_link = document.getElementsByName("bgthemelink");
+
+    for (let i = 0; i < theme_elements.length; i++) {
+        theme_elements[i].disabled = !theme_elements[i].disabled; // for background, colors and stuff
+
+        if (theme_elements_link[i].style.display === 'none') { // for twitter theme
+            theme_elements_link[i].removeAttribute("style");
+        } else {
+            theme_elements_link[i].style.display = 'none';
+        }
+    }
+}

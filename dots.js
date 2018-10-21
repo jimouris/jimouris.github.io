@@ -119,10 +119,10 @@ var canvasDots = function() {
         }
     };
 
-    // change to dark theme on middle mouse click
-    window.onauxclick = function(event) {
-        changeStylesheet();
-    };
+    // // change to dark theme on middle mouse click
+    // window.onauxclick = function(event) {
+    //     changeStylesheet();
+    // };
 
     mousePosition.x = window.innerWidth / 2;
     mousePosition.y = window.innerHeight / 2;

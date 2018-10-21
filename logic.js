@@ -15,17 +15,22 @@ function openTab(evt, tabName) {
 document.getElementById("defaultOpen").click();
 
 function changeStylesheet() {
-    var theme_elements = document.getElementsByName("bgtheme");
-    var theme_elements_link = document.getElementsByName("bgthemelink");
-
-    for (let i = 0; i < theme_elements.length; i++) {
-        theme_elements[i].disabled = !theme_elements[i].disabled; // for background, colors and stuff
-
-        if (theme_elements_link[i].style.display === 'none') { // for twitter theme
-            theme_elements_link[i].removeAttribute("style");
-        } else {
-            theme_elements_link[i].style.display = 'none';
-        }
+    var theme_element = document.getElementById("light-theme");
+    if (theme_element === null) {
+        theme_element = document.getElementById("dark-theme");
+    }
+    var twitter_light = document.getElementById("twitter-light");
+    var twitter_dark = document.getElementById("twitter-dark");
+    if (theme_element.id === "light-theme") {
+        theme_element.id = "dark-theme";
+        theme_element.href = "./style-dark.css";
+        twitter_light.style.display = 'none';
+        twitter_dark.removeAttribute("style");
+    } else {
+        theme_element.id = "light-theme";
+        theme_element.href = "./style.css";
+        twitter_light.removeAttribute("style");
+        twitter_dark.style.display = 'none';
     }
 }
 

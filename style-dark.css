@@ -3,6 +3,11 @@ html {
   overflow: hidden;
 }
 
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
 .background{
   width: 100%;
   height: 100%;
@@ -120,7 +125,7 @@ main.wrapper {
 .main-content {
   border-radius: 2px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  background: rgba(15, 15, 15, 0.4);
+  background: rgba(25, 25, 25, 0.28);
   box-sizing: border-box;
   padding: 2rem;
   position: relative;
@@ -175,7 +180,7 @@ i{
 }
 
 .more-info {
-  border-top: 2px solid lightgray;
+  border-top: 2px solid #808080;
   margin-top: 0.5rem;
   padding-top: 0.5rem;
 }
@@ -192,6 +197,16 @@ main h1 {
   text-transform: uppercase;
   border-bottom: 4px solid #b2b2b2;
   width: auto;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: "futura-pt", arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: 500;
+  border-bottom: 2px solid #808080;
+  width: auto;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 

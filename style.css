@@ -583,3 +583,10 @@ canvas{
     padding: 0 15px 15px;
     text-align: left;
 }
+
+#copyright { 
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+    opacity: 0.4;
+}

@@ -585,9 +585,9 @@ canvas{
     text-align: left;
 }
 
-#copyright { 
-    position: fixed; 
+#copyright {
+    position: fixed;
     bottom:0%;
-    width:100%; 
+    width:100%;
     opacity: 0.4;
 }

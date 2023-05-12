@@ -34,6 +34,6 @@ function changeStylesheet() {
     }
 }
 
-if (Math.floor(Math.random() * 2)) {
-    changeStylesheet();
-}
+// if (Math.floor(Math.random() * 2)) {
+//     changeStylesheet();
+// }

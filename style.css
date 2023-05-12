@@ -591,7 +591,7 @@ canvas{
     opacity: 0.4;
 }
 
-.item-list {
+ol.item-list {
   white-space: normal;
   list-style: none;
   counter-reset: list-counter;
@@ -599,8 +599,26 @@ canvas{
 
 .item-list li {
   counter-increment: list-counter;
+  list-style-position: inside;
+}
+
+.item-list li:not(:last-child) {
+  counter-increment: list-counter;
+  margin-bottom: 1em;
 }
 
 .item-list.publications li:before {
   content: "J" counter(list-counter);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.item-list li span {
+  vertical-align: left;
+  display: inline-table;
+}
+
+.note {
+  font-size: 0.8em;
+  margin-left: 1em;
 }

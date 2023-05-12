@@ -591,3 +591,61 @@ canvas{
     width:100%;
     opacity: 0.4;
 }
+
+ol.item-list {
+  white-space: normal;
+  list-style: none;
+  counter-reset: list-counter 2;
+}
+
+.item-list li {
+  counter-increment: list-counter -1;
+  list-style-position: inside;
+}
+
+.item-list li:not(:last-child) {
+  counter-increment: list-counter -1;
+  margin-bottom: 1em;
+}
+
+.item-list.journals li:before {
+  content: "J" counter(list-counter);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.item-list.conferences li:before {
+  content: "C" counter(list-counter);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.item-list.archives li:before {
+  content: "O" counter(list-counter);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.item-list.magazines li:before {
+  content: "M" counter(list-counter);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.item-list.theses li:before {
+  content: "T" counter(list-counter);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.item-list li span {
+  vertical-align: left;
+  display: inline-table;
+  width: 92%;
+  padding-left: 10px;
+}
+
+.note {
+  font-size: 0.8em;
+  /* margin-left: 1em; */
+}

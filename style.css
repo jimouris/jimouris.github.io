@@ -590,3 +590,17 @@ canvas{
     width:100%;
     opacity: 0.4;
 }
+
+.item-list {
+  white-space: normal;
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+.item-list li {
+  counter-increment: list-counter;
+}
+
+.item-list.publications li:before {
+  content: "J" counter(list-counter);
+}

@@ -638,6 +638,12 @@ ol.item-list {
   font-weight: 600;
 }
 
+.item-list.drafts li:before {
+  content: "D" counter(list-counter);
+  font-family: inherit;
+  font-weight: 600;
+}
+
 .item-list li span {
   vertical-align: left;
   display: inline-table;

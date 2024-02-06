@@ -1,4 +1,5 @@
 # ignore files from sublime
 *.sublime-workspace
 *.sublime-project
+*.DS_Store
 .vscode/*

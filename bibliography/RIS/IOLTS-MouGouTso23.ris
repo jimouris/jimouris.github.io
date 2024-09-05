@@ -1,0 +1,27 @@
+TY  - CPAPER
+AU  - Mouris, Dimitris
+AU  - Gouert, Charles
+AU  - Tsoutsos, Nektarios Georgios
+TI  - $\textMP\ell\circ \mathrmC$: Privacy-Preserving IP Verification Using
+      Logic Locking and Secure Multiparty Computation
+T2  - 2023 IEEE 29th International Symposium on On-Line Testing and Robust
+      System Design (IOLTS)
+SP  - 1-8
+PY  - 2023
+DA  - 2023
+DO  - 10.1109/IOLTS59296.2023.10224859
+UR  - http://dx.doi.org/10.1109/IOLTS59296.2023.10224859
+KW  - Privacy
+KW  - Runtime
+KW  - Computational modeling
+KW  - Supply chains
+KW  - Intellectual property
+KW  - System recovery
+KW  - Computational efficiency
+KW  - Applied Cryptography
+KW  - Hardware Security
+KW  - Intellectual Property (IP) Verification
+KW  - IP Piracy
+KW  - Logic Locking
+KW  - Secure Multiparty Computation (MPC)
+ER  -

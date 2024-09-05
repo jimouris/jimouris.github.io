@@ -1,0 +1,24 @@
+TY  - JOUR
+AU  - Mouris, Dimitris
+AU  - Tsoutsos, Nektarios Georgios
+TI  - Zilch: A Framework for Deploying Transparent Zero-Knowledge Proofs
+T2  - IEEE Transactions on Information Forensics and Security
+VL  - 16
+SP  - 3269-3284
+PY  - 2021
+DA  - 2021
+DO  - 10.1109/TIFS.2021.3074869
+UR  - http://dx.doi.org/10.1109/TIFS.2021.3074869
+KW  - Computational modeling
+KW  - Integrated circuit modeling
+KW  - Turing machines
+KW  - Programming
+KW  - Password
+KW  - Logic gates
+KW  - Cryptography
+KW  - Abstract machine
+KW  - compiler
+KW  - cryptography
+KW  - verifiable computation
+KW  - zero-knowledge proofs of knowledge
+ER  -

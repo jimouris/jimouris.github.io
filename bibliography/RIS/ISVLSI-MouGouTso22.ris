@@ -1,0 +1,24 @@
+TY  - CPAPER
+AU  - Mouris, Dimitris
+AU  - Gouert, Charles
+AU  - Tsoutsos, Nektarios Georgios
+TI  - zk-Sherlock: Exposing Hardware Trojans in Zero-Knowledge
+T2  - 2022 IEEE Computer Society Annual Symposium on VLSI (ISVLSI)
+SP  - 170-175
+PY  - 2022
+DA  - 2022
+DO  - 10.1109/ISVLSI54635.2022.00042
+UR  - http://dx.doi.org/10.1109/ISVLSI54635.2022.00042
+KW  - Privacy
+KW  - Supply chains
+KW  - Transforms
+KW  - Intellectual property
+KW  - Very large scale integration
+KW  - Hardware
+KW  - Manufacturing
+KW  - ─Circuit simulation
+KW  - Hardware security
+KW  - Hardware Trojans
+KW  - IP verification
+KW  - Zero-knowledge proofs (ZKPs)
+ER  -

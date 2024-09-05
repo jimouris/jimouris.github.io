@@ -1,0 +1,20 @@
+TY  - CPAPER
+AU  - Cronin, Patrick
+AU  - Gouert, Charles
+AU  - Mouris, Dimitris
+AU  - Tsoutsos, Nektarios Georgios
+AU  - Yang, Chengmo
+TI  - Covert Data Exfiltration Using Light and Power Channels
+T2  - 2019 IEEE 37th International Conference on Computer Design (ICCD)
+SP  - 301-304
+PY  - 2019
+DA  - 2019
+DO  - 10.1109/ICCD46524.2019.00045
+UR  - http://dx.doi.org/10.1109/ICCD46524.2019.00045
+KW  - Covert channels
+KW  - Data exfiltration
+KW  - Air gapped networks
+KW  - Optical covert channels
+KW  - Power covert channels
+KW  - Embedded Security
+ER  -

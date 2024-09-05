@@ -1,0 +1,29 @@
+TY  - JOUR
+AU  - Gouert, Charles
+AU  - Mouris, Dimitris
+AU  - Tsoutsos, Nektarios Georgios
+TI  - Juliet: A Configurable Processor for Computing on Encrypted Data
+T2  - IEEE Transactions on Computers
+VL  - 73
+IS  - 9
+SP  - 2335-2349
+PY  - 2024
+DA  - 2024
+DO  - 10.1109/TC.2024.3416752
+UR  - http://dx.doi.org/10.1109/TC.2024.3416752
+KW  - Cryptography
+KW  - Noise
+KW  - Circuits
+KW  - Libraries
+KW  - Cloud computing
+KW  - Computers
+KW  - Assembly
+KW  - Applied cryptography
+KW  - encrypted processor
+KW  - hardware acceleration
+KW  - homomorphic encryption
+KW  - privacy-enhancing technologies
+KW  - privacy-preserving ISA
+KW  - private computation
+KW  - secure cloud computing
+ER  -

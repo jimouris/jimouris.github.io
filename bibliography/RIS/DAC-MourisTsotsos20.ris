@@ -1,0 +1,23 @@
+TY  - CPAPER
+AU  - Mouris, Dimitris
+AU  - Georgios Tsoutsos, Nektarios
+TI  - Pythia: Intellectual Property Verification in Zero-Knowledge
+T2  - 2020 57th ACM/IEEE Design Automation Conference (DAC)
+SP  - 1-6
+PY  - 2020
+DA  - 2020
+DO  - 10.1109/DAC18072.2020.9218639
+UR  - http://dx.doi.org/10.1109/DAC18072.2020.9218639
+KW  - Logic gates
+KW  - IP networks
+KW  - Integrated circuits
+KW  - Cryptography
+KW  - Transforms
+KW  - Indexes
+KW  - Hardware design languages
+KW  - Hardware security
+KW  - trustworthy hardware
+KW  - intellectual property verification
+KW  - zero-knowledge proofs
+KW  - IP theft
+ER  -

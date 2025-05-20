@@ -659,3 +659,23 @@ ol.item-list {
   font-size: 0.8em;
   /* margin-left: 1em; */
 }
+
+.fa-signalapp {
+  position: relative;
+}
+.fa-signalapp:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url('images/signalapp.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  transition: filter 0.2s;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(96%) contrast(87%);
+}
+.fa-signalapp:hover:before {
+  filter: brightness(0) invert(1);
+}

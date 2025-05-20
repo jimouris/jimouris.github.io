@@ -231,7 +231,7 @@ button{
   outline: none;
 }
 
-nav button {
+nav a.js-tablinks {
   display: inline-block;
   color: #222;
   text-transform: uppercase;
@@ -241,16 +241,21 @@ nav button {
   opacity: 0.8;
   -webkit-transition: opacity 0.1s ease-in;
   transition: opacity 0.1s ease-in;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-right: 0.8rem;
 }
 
-nav button:hover {
+nav a.js-tablinks:hover {
   color: #000;
   opacity: 1;
 }
 
-nav .active::after,
-nav button::after,
-nav button::before {
+nav a.js-tablinks.active::after,
+nav a.js-tablinks::after,
+nav a.js-tablinks::before {
   content: "";
   height: 1px;
   width: 0;
@@ -261,29 +266,29 @@ nav button::before {
   transition: width 0.1s ease-in;
 }
 
-nav button:hover::after,
-nav button:hover::before,
-nav .active::after {
+nav a.js-tablinks:hover::after,
+nav a.js-tablinks:hover::before,
+nav a.js-tablinks.active::after {
   width: 80%;
 }
 
-nav button.inactive:active::after,
-nav button.inactive:active::before {
+nav a.js-tablinks.inactive:active::after,
+nav a.js-tablinks.inactive:active::before {
   width: 100%;
 }
 
-nav .active::after,
-nav button::after {
+nav a.js-tablinks.active::after,
+nav a.js-tablinks::after {
   bottom: -5px;
   left: 0;
 }
 
-nav button::before {
+nav a.js-tablinks::before {
   top: -5px;
   right: 0;
 }
 
-nav button:first-of-type {
+nav a.js-tablinks:first-of-type {
   margin-right: 0.8rem;
 }
 

@@ -37,3 +37,48 @@ function changeStylesheet() {
 if (Math.floor(Math.random() * 2)) {
     changeStylesheet();
 }
+
+// Function to show the appropriate tab based on URL hash
+function showTabFromHash() {
+    // Get the hash from the URL, default to 'about' if no hash
+    const hash = window.location.hash.slice(1) || 'about';
+
+    // Hide all tab content
+    const tabContents = document.getElementsByClassName('js-tabcontent');
+    for (let content of tabContents) {
+        content.style.display = 'none';
+    }
+
+    // Remove active class from all tabs
+    const tabLinks = document.getElementsByClassName('js-tablinks');
+    for (let link of tabLinks) {
+        link.classList.remove('active');
+    }
+
+    // Show the selected tab content
+    const selectedContent = document.getElementById(hash);
+    if (selectedContent) {
+        selectedContent.style.display = 'block';
+    }
+
+    // Add active class to the selected tab
+    const selectedTab = document.querySelector(`a[href="#${hash}"]`);
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
+}
+
+// Listen for hash changes
+window.addEventListener('hashchange', showTabFromHash);
+
+// Show initial tab on page load
+document.addEventListener('DOMContentLoaded', showTabFromHash);
+
+// Prevent default link behavior and handle navigation
+document.querySelectorAll('.js-tablinks').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const hash = link.getAttribute('href');
+        window.location.hash = hash;
+    });
+});

@@ -34,9 +34,9 @@ function changeStylesheet() {
     }
 }
 
-if (Math.floor(Math.random() * 2)) {
-    changeStylesheet();
-}
+// if (Math.floor(Math.random() * 2)) {
+//     changeStylesheet();
+// }
 
 // Function to show the appropriate tab based on URL hash
 function showTabFromHash() {

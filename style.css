@@ -1,3 +1,73 @@
+/* CSS Reset - Normalize browser defaults */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+  display:block
+}
+body{
+  line-height:1
+}
+ol,ul{
+  list-style:none
+}
+blockquote,q{
+  quotes:none
+}
+blockquote:before,blockquote:after,q:before,q:after{
+  content:'';
+  content:none
+}
+table{
+  border-collapse:collapse;
+  border-spacing:0
+}
+
+:root {
+  /* Light theme (default) */
+  --text-color: #00000b;
+  --nav-link-color: #222;
+  --nav-link-hover-color: #000;
+  --nav-link-underline: #222;
+  --main-content-bg: rgba(255, 255, 255, 0.28);
+  --fa-bg: #f0f0f0;
+  --fa-color: #333;
+  --fa-hover-bg: #333;
+  --cv-color: #333;
+  --cv-underline: #333;
+  --link-color: #333;
+  --link-hover-color: #0c173e;
+  --h1-border: #00000b;
+  --h2-border: lightgray;
+  --more-info-border: lightgray;
+  --background-bg: transparent;
+}
+
+.dark-theme {
+  /* Dark theme */
+  --text-color: #b2b2b2;
+  --nav-link-color: #b2b2b2;
+  --nav-link-hover-color: #e5e5e5;
+  --nav-link-underline: #e5e5e5;
+  --main-content-bg: rgba(25, 25, 25, 0.28);
+  --fa-bg: #262626;
+  --fa-color: #b2b2b2;
+  --fa-hover-bg: #333;
+  --cv-color: #b2b2b2;
+  --cv-underline: #b2b2b2;
+  --link-color: #b2b2b2;
+  --link-hover-color: #b2b2b2;
+  --h1-border: #b2b2b2;
+  --h2-border: #808080;
+  --more-info-border: #808080;
+  --background-bg: rgb(15, 15, 15);
+}
+
 html {
   height: 100%;
   overflow: hidden;
@@ -17,13 +87,9 @@ sup {
   right: 0;
   bottom: 0;
   z-index: -1;
+  background: var(--background-bg);
 }
 
-.skype-name{
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
 body {
   height: 100%;
   width: 100vw;
@@ -39,48 +105,13 @@ body {
 }
 
 
-.col-1 {
-  width: 10%;
-  float: left;
-}
-
 .col-2 {
   width: 20%;
   float: left;
 }
 
-.col-3 {
-  width: 30%;
-  float: left;
-}
-
-.col-4 {
-  width: 40%;
-  float: left;
-}
-
-.col-5 {
-  width: 50%;
-  float: left;
-}
-
-.col-6 {
-  width: 60%;
-  float: left;
-}
-
-.col-7 {
-  width: 70%;
-  float: left;
-}
-
 .col-8 {
   width: 80%;
-  float: left;
-}
-
-.col-9 {
-  width: 90%;
   float: left;
 }
 
@@ -91,30 +122,34 @@ body {
 
 body {
   font-family: "quatro-slab", monospace;
+  font-size: 14px;
   -webkit-font-smoothing: subpixel-antialised;
   line-height: 1.38;
 }
 
 nav {
-  width: 850px;
-  margin: 0 auto;
-  padding-top: 2rem;
+  width: 1200px;
+  margin: 0 1rem;
+  padding: 2rem 100px 0 100px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 div.all-wrap {
   width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  padding: 20px 100px 100px;
+  padding: 20px 0 100px 0;
   white-space: nowrap;
   transition: opacity .2s ease-in;
   transition-delay: .2s;
 }
 
 main.wrapper {
-  color: #00000b;
+  color: var(--text-color);
   width: 100%;
   margin-top: 15px;
+  margin-left: 100px;
   position: relative;
   display: inline-block;
   -webkit-transition: margin-left ease-in-out 0.15s;
@@ -124,16 +159,13 @@ main.wrapper {
 .main-content {
   border-radius: 2px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  background: rgba(255, 255, 255, 0.28);
+  background: var(--main-content-bg);
   box-sizing: border-box;
   padding: 2rem;
+  margin: 0 1rem;
   position: relative;
-  width: 100%;
+  width: calc(100% - 2rem);
   bottom: 0;
-}
-
-.dont-break{
-  white-space: nowrap;
 }
 
 img {
@@ -147,11 +179,6 @@ img {
 .p-20 {
   display: inline-block;
   padding-top: 20px;
-}
-
-.egw {
-  margin-left: -4rem;
-  border-radius: 1px;
 }
 
 main p {
@@ -173,13 +200,8 @@ i{
   box-sizing: border-box;
 }
 
-.personal-interest {
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-
 .more-info {
-  border-top: 2px solid lightgray;
+  border-top: 2px solid var(--more-info-border);
   margin-top: 0.5rem;
   padding-top: 0.5rem;
 }
@@ -191,19 +213,20 @@ i{
 
 main h1 {
   font-family: "futura-pt", arial, sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: 800;
   text-transform: uppercase;
-  border-bottom: 4px solid #00000b;
+  border-bottom: 4px solid var(--h1-border);
   width: auto;
   margin-bottom: 1rem;
+  margin-left: 0;
 }
 
 h2 {
   font-family: "futura-pt", arial, sans-serif;
   font-size: 1.4em;
   font-weight: 500;
-  border-bottom: 2px solid lightgray;
+  border-bottom: 2px solid var(--h2-border);
   width: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -233,7 +256,7 @@ button{
 
 nav a.js-tablinks {
   display: inline-block;
-  color: #222;
+  color: var(--nav-link-color);
   text-transform: uppercase;
   font-size: 16px;
   cursor: pointer;
@@ -249,7 +272,7 @@ nav a.js-tablinks {
 }
 
 nav a.js-tablinks:hover {
-  color: #000;
+  color: var(--nav-link-hover-color);
   opacity: 1;
 }
 
@@ -261,7 +284,7 @@ nav a.js-tablinks::before {
   width: 0;
   display: block;
   position: absolute;
-  background: #222;
+  background: var(--nav-link-underline);
   -webkit-transition: width 0.1s ease-in;
   transition: width 0.1s ease-in;
 }
@@ -270,11 +293,6 @@ nav a.js-tablinks:hover::after,
 nav a.js-tablinks:hover::before,
 nav a.js-tablinks.active::after {
   width: 80%;
-}
-
-nav a.js-tablinks.inactive:active::after,
-nav a.js-tablinks.inactive:active::before {
-  width: 100%;
 }
 
 nav a.js-tablinks.active::after,
@@ -292,13 +310,43 @@ nav a.js-tablinks:first-of-type {
   margin-right: 0.8rem;
 }
 
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: var(--nav-link-color);
+  opacity: 0.8;
+  transition: opacity 0.1s ease-in, transform 0.2s ease-in-out;
+  padding: 0.2rem 0;
+  vertical-align: middle;
+  position: absolute;
+  right: 25px;
+  top: 2rem;
+  margin-right: -100px;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+  transform: rotate(15deg);
+}
+
+.theme-toggle:active {
+  transform: rotate(30deg) scale(0.95);
+}
+
+.theme-toggle i {
+  display: block;
+}
 
 a.fa {
   text-decoration: none;
-  color: #333;
+  color: var(--fa-color);
   font-size: 1.7em;
   display: inline-block;
-  background: #f0f0f0;
+  background: var(--fa-bg);
   margin: 0.5rem 0.5rem 0;
   padding: 1.3rem;
   border-radius: 2px;
@@ -319,7 +367,7 @@ a.fa::after {
   content: "";
   width: 0;
   height: 100%;
-  background: #333;
+  background: var(--fa-hover-bg);
   display: block;
   position: absolute;
   top: 0;
@@ -346,7 +394,7 @@ a.fa:hover::before {
 }
 
 a.fa:active::before {
-  color: #333;
+  color: var(--fa-color);
 }
 
 .fa:before {
@@ -365,7 +413,7 @@ a.fa:active::before {
 }
 
 a.cv {
-  color: #333;
+  color: var(--cv-color);
   position: relative;
   text-decoration: none;
   font-weight: bold;
@@ -379,7 +427,7 @@ a.cv:after {
   position: absolute;
   left: 0;
   bottom: -3px;
-  background-color: #333;
+  background-color: var(--cv-underline);
   -webkit-transition: width 0.1s ease-in-out;
   transition: width 0.1s ease-in-out;
 }
@@ -390,7 +438,7 @@ a.cv:hover {
 }
 
 a.cv:hover::after {
-  /*width: 100%;*/
+  width: 0%;
 }
 
 .text-green{
@@ -399,20 +447,31 @@ a.cv:hover::after {
 
 a,
 a:visited{
-  color: #333;
+  color: var(--link-color);
 }
 
 a.fa-key{
-  color: #333;
+  color: var(--link-color);
 }
 
 a:hover{
-  color: #0c173e;
+  color: var(--link-hover-color);
 }
 
 @media screen and (max-width: 1070px){
-    div.all-wrap, nav{
+    div.all-wrap{
         width: 600px;
+        padding: 20px 0 100px 0;
+    }
+    main.wrapper{
+        margin-left: 30px;
+    }
+    nav{
+        width: 600px;
+        padding: 2rem 30px 0 30px;
+    }
+    .theme-toggle{
+        right: calc(1rem + 30px);
     }
 }
 
@@ -423,22 +482,30 @@ a:hover{
         box-sizing: border-box;
         white-space: normal;
     }
+    main.wrapper{
+        margin-left: 0;
+    }
 
     nav{
         display: none;
     }
-    .skype-name{
-      opacity: 1;
-      transition: opacity 0.4s ease-in;
-      position: absolute;
-      bottom: -30px;
-      height: 24px;
-      border-radius: 32px;
-      background: #00AFF0;
-      color: white;
-      padding: 0.4em 0.5em;
-      display: block;
-      width: auto;
+
+    /* Mobile theme toggle - positioned top right, visible even when nav is hidden */
+    nav .theme-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+        background: var(--main-content-bg);
+        padding: 0.5rem;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        margin: 0;
     }
 
     .show-mobile{
@@ -460,25 +527,6 @@ a:hover{
         text-align: left;
         padding: 0 1rem 1rem;
     }
-    .egw{
-        width: 130px;
-        height: 130px;
-        margin: 0 auto;
-        border-radius: 50%;
-        float: none;
-        display: block;
-        overflow: hidden;
-        border: 2px solid #fff;
-        box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
-    .egw img{
-        margin-top: -23px;
-        margin-left: -1px;
-    }
-
-    .personal-interest{
-        margin-top: 1rem;
-    }
 }
 
 @media screen and (max-width: 480px){
@@ -495,62 +543,9 @@ a:hover{
     }
 }
 
-
-
-
-
-
-p#SkypeButton_Call_dimitris.mouris_1_paraElement {}
-
-div#SkypeButton_Call_dimitris.mouris_1 {
-    display: inline-block!important;
-    width: 20%;
-}
-
-div#SkypeButton_Call_dimitris.mouris_1 {}
-
-div[id*="Skype"] {
-    display: inline-block;
-    /* max-height: 70px; */
-    vertical-align: top;
-    color: black;
-    padding: 1.6em 0 0 0.9em;
-    margin-top: 0.6em;
-    position: relative;
-}
-
-div[id*="Skype"] p img {
-    margin: 0!important;
-    padding: 0!important;
-    line-height: 0;
-    vertical-align: 0px!important;
-}
-
-div[id*="Skype"] p {
-    margin: 0;
-    font-size: 10px;
-}
-
 p.more-info {
     width: 100%;
 }
-
-
-div[id*="Skype"]:hover .skype-name{
-  opacity: 1;
-  transition: opacity 0.4s ease-in;
-  position: absolute;
-  bottom: -30px;
-  height: 24px;
-  border-radius: 32px;
-  background: #00AFF0;
-  color: white;
-  padding: 0.4em 0.5em;
-  display: block;
-  width: auto;
-}
-
-
 
 canvas{
   display: none;
@@ -563,9 +558,6 @@ canvas{
     height: 100%;
     background-size: cover;
 }
-
-
-
 
 /* CSS Fading effect */
 .js-tabcontent {
@@ -582,7 +574,6 @@ canvas{
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
 
 .main-content-text {
     padding: 0 15px 15px;

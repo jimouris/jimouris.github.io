@@ -1,2 +1,2 @@
 # jimouris.github.io
-My Personal Website
+Personal website: [jimouris.github.io](jimouris.github.io), [jimouris.com](jimouris.com).

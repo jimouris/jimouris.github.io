@@ -15,7 +15,7 @@
     <!-- facebook open graph tags -->
     <meta property="og:title" content="Dimitris Mouris personal website">
     <meta property="og:url" content="https://jimouris.github.io">
-    <meta property="og:image" content="https://jimouris.github.io/mouris_space.png">
+    <meta property="og:image" content="https://jimouris.github.io/pfp.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:description" content="Thanks for dropping by!">
@@ -26,7 +26,6 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script src="https://kit.fontawesome.com/f33f256f52.js" crossorigin="anonymous"></script>
     <!-- styles stuff -->
-    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css" id="light-theme">
 
     <!-- Google tag (gtag.js) -->
@@ -40,7 +39,7 @@
     </script>
 
 </head>
-<body>
+<body class="dark-theme">
     <div class="back_mob" id="background-mobile"></div>
     <canvas class="background" id="background-dots"></canvas>
 
@@ -48,18 +47,21 @@
         <nav class="tab">
             <a href="#about" class="js-tablinks" id="defaultOpen">About Me</a>
             <a href="#publications" class="js-tablinks">Publications</a>
-            <a href="#projects" class="js-tablinks">Open-Source Projects</a>
+            <a href="#projects" class="js-tablinks">Open-Source</a>
             <a href="#contact" class="js-tablinks">Contact</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fa fa-sun" id="theme-icon"></i>
+            </button>
         </nav>
 
         <main class="wrapper show-mobile js-tabcontent" id="about">
           <section class="main-content">
             <h1>./About Me</h1>
             <section class="clearfix">
-              <div class="col-2"> <img src="./mouris_space.jpg" style="width: 100%; height: 100%; object-fit: cover;"/> </div>
+              <div class="col-2"> <img src="./pfp.jpg" style="width: 100%; height: 100%; object-fit: cover;"/> </div>
               <div class="col-8 info">
                 <p>
-                    <b class="text-green">Hey!</b> My name is Dimitris Mouris <a style="font-family:’Arial Bold’,Arial,sans-serif;font-size:0.95em"> (Δημήτρης Μούρης)</a> and I am the Head of Cryptography at <a href="https://www.nillion.com/" class="cv target="_blank"> Nillion Labs (Nilogy)</a>.
+                    <b class="text-green">Hey!</b> My name is Dimitris Mouris <a style="font-family:’Arial Bold’,Arial,sans-serif;font-size:0.95em"> (Δημήτρης Μούρης)</a> and I am the Head of Cryptography at <a href="https://www.nillion.com/" class="cv target="_blank"> Nillion (Nilogy)</a>.
                     I'm originally from Athens, Greece, and currently based in Philadelphia, USA.
                 </p>
                 <br/>
@@ -433,7 +435,7 @@
         <main class="wrapper show-mobile js-tabcontent" id="projects">
           <section class="main-content">
             <h1>
-              ./Open-Source Projects
+              ./Open-Source
               <div style="float:right;">
                 <a class="fa fa-github-alt" style="background-color:rgba(0, 0, 0, 0);font-size:1em;padding:0" href="https://github.com/jimouris" target="_blank"><span class="with-icon"></span></a>
               </div>

@@ -14,29 +14,50 @@ function openTab(evt, tabName) {
 
 document.getElementById("defaultOpen").click();
 
-function changeStylesheet() {
-    var theme_element = document.getElementById("light-theme");
-    if (theme_element === null) {
-        theme_element = document.getElementById("dark-theme");
-    }
-    var twitter_light = document.getElementById("twitter-light");
-    var twitter_dark = document.getElementById("twitter-dark");
-    if (theme_element.id === "light-theme") {
-        theme_element.id = "dark-theme";
-        theme_element.href = "./style-dark.css";
-        twitter_light.style.display = 'none';
-        twitter_dark.removeAttribute("style");
+// Theme management
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Use saved theme, or default to dark
+    const theme = savedTheme || 'dark';
+    setTheme(theme);
+}
+
+function setTheme(theme) {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (theme === 'dark') {
+        body.classList.add('dark-theme');
+        if (themeIcon) {
+            themeIcon.className = 'fa fa-sun';
+        }
+        localStorage.setItem('theme', 'dark');
     } else {
-        theme_element.id = "light-theme";
-        theme_element.href = "./style.css";
-        twitter_light.removeAttribute("style");
-        twitter_dark.style.display = 'none';
+        body.classList.remove('dark-theme');
+        if (themeIcon) {
+            themeIcon.className = 'fa fa-moon';
+        }
+        localStorage.setItem('theme', 'light');
     }
 }
 
-// if (Math.floor(Math.random() * 2)) {
-//     changeStylesheet();
-// }
+function toggleTheme() {
+    const isDark = document.body.classList.contains('dark-theme');
+    setTheme(isDark ? 'light' : 'dark');
+}
+
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initTheme();
+
+    // Add click handler to theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+});
 
 // Function to show the appropriate tab based on URL hash
 function showTabFromHash() {

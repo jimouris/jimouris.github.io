@@ -152,6 +152,7 @@ main.wrapper {
   margin-left: 100px;
   position: relative;
   display: inline-block;
+  z-index: 1;
   -webkit-transition: margin-left ease-in-out 0.15s;
   transition: margin-left ease-in-out 0.15s;
 }
@@ -320,12 +321,12 @@ nav a.js-tablinks:first-of-type {
   color: var(--nav-link-color);
   opacity: 0.8;
   transition: opacity 0.1s ease-in, transform 0.2s ease-in-out;
-  padding: 0.2rem 0;
+  padding: 0.2rem 0.5rem;
   vertical-align: middle;
-  position: absolute;
-  right: 25px;
-  top: 2rem;
-  margin-right: -100px;
+  position: fixed;
+  right: calc(1rem + 120px);
+  top: 3rem;
+  z-index: 100;
 }
 
 .theme-toggle:hover {
@@ -458,88 +459,83 @@ a:hover{
   color: var(--link-hover-color);
 }
 
-@media screen and (max-width: 1070px){
-    div.all-wrap{
-        width: 600px;
-        padding: 20px 0 100px 0;
-    }
-    main.wrapper{
-        margin-left: 30px;
-    }
-    nav{
-        width: 600px;
-        padding: 2rem 30px 0 30px;
-    }
-    .theme-toggle{
-        right: calc(1rem + 30px);
-    }
-}
-
+/* Mobile styles */
 @media screen and (max-width: 800px){
-    div.all-wrap{
-        width: 100%;
-        padding: 2rem 30px;
-        box-sizing: border-box;
-        white-space: normal;
-    }
-    main.wrapper{
-        margin-left: 0;
-    }
-
+    /* Hide navigation */
     nav{
         display: none;
     }
 
-    /* Mobile theme toggle - positioned top right, visible even when nav is hidden */
-    nav .theme-toggle {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 1000;
-        background: var(--main-content-bg);
-        padding: 0.5rem;
-        border-radius: 50%;
-        width: 2.5rem;
-        height: 2.5rem;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-        margin: 0;
-    }
-
-    .show-mobile{
-      display: block!important;
-    }
-}
-
-@media screen and (max-width: 645px){
-    .main-content{
-        padding: 0rem;
-    }
+    /* Layout adjustments */
     div.all-wrap{
-        text-align: center;
-    }
-    .info{
         width: 100%;
-        margin-top: .5rem;
-        padding-left: 0;
-        text-align: left;
-        padding: 0 1rem 1rem;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        white-space: normal;
     }
-}
 
-@media screen and (max-width: 480px){
-    div.all-wrap{
-        padding-left: 10px;
-        padding-right: 10px;
+    main.wrapper{
+        margin-left: 0;
+        width: 100%;
+        display: block;
     }
-}
 
-@media screen and (max-width: 360px){
-    div.all-wrap{
+    .main-content{
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Make dark theme more transparent on mobile */
+    .dark-theme .main-content {
+        background: rgba(25, 25, 25, 0.15);
+    }
+
+    /* Mobile theme toggle - fixed top right */
+    .theme-toggle {
+        position: fixed !important;
+        top: 1rem !important;
+        right: 1rem !important;
+        z-index: 1000 !important;
+        background: var(--main-content-bg) !important;
+        padding: 0.5rem !important;
+        border-radius: 50% !important;
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+        margin: 0 !important;
+    }
+
+    /* Disable animations on mobile */
+    .js-tabcontent {
+        -webkit-animation: none;
+        animation: none;
+        opacity: 1;
+    }
+
+    /* Show mobile content */
+    .show-mobile{
+        display: block !important;
+    }
+
+    /* Image and info adjustments */
+    .col-2 {
+        width: 50%;
+        max-width: 200px;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .col-8 {
+        width: 100%;
+        float: none;
+    }
+
+    .info{
         padding-left: 0;
-        padding-right: 0;
+        margin-top: 1rem;
     }
 }
 
@@ -557,6 +553,9 @@ canvas{
     width: 100%;
     height: 100%;
     background-size: cover;
+    z-index: -1;
+    background-color: var(--background-bg);
+    background-blend-mode: overlay;
 }
 
 /* CSS Fading effect */

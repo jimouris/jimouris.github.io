@@ -597,6 +597,12 @@ ol.item-list {
   list-style-position: inside;
 }
 
+.item-list li:before {
+  display: inline-block;
+  width: 4ch;            /* reserve space for label like 'J12' */
+  text-align: left;      /* keep label readable; ensures following text aligns */
+}
+
 .item-list li:not(:last-child) {
   counter-increment: list-counter -1;
   margin-bottom: 1em;
@@ -653,8 +659,12 @@ ol.item-list {
 
 .item-list.talks li {
   display: flex;
-  align-items: center; /* vertically center T1/T2 with multi-line content */
-  gap: 1rem;
+  align-items: flex-start; /* top-align bullet, text and thumbnail like publications */
+  gap: 0;
+}
+
+.item-list.talks li::before {
+  align-self: flex-start; /* ensure the T# label starts at the top */
 }
 
 .item-list.talks li span {
@@ -674,6 +684,43 @@ ol.item-list {
   font-size: 0.85em;
   opacity: 0.75;
   margin-top: 0.15rem;
+}
+
+.authors {
+  font-size: 0.85em;
+  opacity: 0.75;
+  margin: 0.05rem 0 0 0; /* tighten space below authors */
+  padding-left: 0;     /* ensure no extra indent */
+  display: block;      /* start at line start; ignore leading whitespace */
+  width: auto;         /* let content size naturally */
+}
+
+/* Override the generic item-list span rule for author lines */
+.item-list li span.authors {
+  padding-left: 0;
+  display: block;
+  width: auto;
+}
+
+/* Venue styling in Publications: same as authors but full opacity */
+.venue {
+  font-size: 0.85em;
+  opacity: 1;
+  margin: 0.05rem 0 0 0;
+  padding-left: 0;
+  display: block;
+  width: auto;
+}
+
+.item-list li span.venue {
+  padding-left: 0;
+  display: block;
+  width: auto;
+}
+
+/* Publications resource links (Paper, ePrint, Code, YouTube, etc.) font size same as venue */
+#publications .item-list li span a.cv:not(:first-of-type) {
+  font-size: 0.85em;
 }
 
 .talks-thumbnail {

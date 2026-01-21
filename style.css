@@ -579,6 +579,14 @@ canvas{
     text-align: left;
 }
 
+.main-content-text p:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+#projects .main-content-text p:not(:last-child) {
+    margin-bottom: 0.75em;
+}
+
 #copyright {
     position: fixed;
     bottom:0%;
